@@ -1,5 +1,7 @@
 // Centralized API client for NexusHR
-const API_BASE = 'https://nexushr-demo.onrender.com/';
+const API_BASE = window.location.hostname === 'localhost'
+  ? 'http://localhost:5000/api'
+  : 'https://nexushr-demo.onrender.com/api';
 
 export const api = {
   // Health
